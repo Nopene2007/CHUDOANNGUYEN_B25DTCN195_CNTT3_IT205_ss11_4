@@ -67,12 +67,10 @@ while True:
             
         buy_quantity= int(quantity_input)
         
-        # Bẫy 4: Nhập số lượng mua vượt quá tồn kho
         if buy_quantity > found["quantity"]:
             print("Số lượng trong kho không đủ bán")
             continue
             
-        # Xử lý hợp lệ: Cập nhật hệ thống
         found["quantity"] -= buy_quantity
         found["sold"] += buy_quantity
         total_payment = buy_quantity * found["price"]
